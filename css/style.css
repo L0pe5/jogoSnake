@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #6dc740; /* Cor verde claro para o fundo */
+    background-color: #70bd4a; /* Cor verde claro para o fundo */
     font-family: Arial, sans-serif;
 }
 
@@ -40,6 +40,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 5px solid #fff; /* Borda branca ao redor do contêiner do jogo */
+    padding: 10px; /* Espaço entre a borda e o quadro do jogo */
+    background-color: #000; /* Cor de fundo preta para o contêiner do jogo */
 }
 
 #game-board {
@@ -47,8 +50,6 @@ body {
     width: 400px;
     height: 400px;
     position: relative;
-    margin-top: 10px;
-    border: 5px solid #fff; /* Borda branca ao redor do quadro do jogo */
 }
 
 #score {
