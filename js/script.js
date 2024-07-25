@@ -1,5 +1,8 @@
 const board = document.getElementById('game-board');
 const scoreElement = document.getElementById('score');
+const startScreen = document.getElementById('start-screen');
+const startButton = document.getElementById('start-button');
+const gameContainer = document.getElementById('game-container');
 const boardSize = 400;
 const snakeSize = 20;
 const snakeSpeed = 200; // speed in milliseconds
@@ -9,6 +12,13 @@ let direction = 'RIGHT';
 let food = { x: 60, y: 60 };
 let score = 0;
 let gameInterval;
+
+function startGame() {
+    startScreen.classList.add('hidden');
+    gameContainer.classList.remove('hidden');
+    generateFood();
+    gameInterval = setInterval(updateGame, snakeSpeed);
+}
 
 function drawSnake() {
     board.innerHTML = ''; // Clear the board
@@ -113,6 +123,4 @@ function handleKeyDown(event) {
 }
 
 document.addEventListener('keydown', handleKeyDown);
-
-generateFood();
-gameInterval = setInterval(updateGame, snakeSpeed);
+startButton.addEventListener('click', startGame);
