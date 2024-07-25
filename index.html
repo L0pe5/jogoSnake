@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Cobrinha</title>
+    <title>Snake Game</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="container">
-        <h1 id="title">SNAKE</h1>
-        <div id="start-screen">
-            <button id="start-button">Começar Jogo</button>
+    <div id="game-container">
+        <h1>SNAKE</h1>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="controls">
+            <button id="startBtn">Start</button>
+            <button id="restartBtn" style="display:none;">Restart</button>
+            <p id="score">Score: 0</p>
         </div>
-        <div id="game-container" class="hidden">
-            <div id="score">Score: 0</div>
-            <div id="game-board"></div>
+        <div id="gameOverMessage" style="display: none;">
+            <h2>Game Over</h2>
+            <p id="finalScore"></p>
         </div>
     </div>
     <script src="js/script.js"></script>
